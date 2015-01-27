@@ -221,7 +221,7 @@ public class GlavniProzor extends javax.swing.JFrame {
                 .addContainerGap(42, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("View Books", viewBooksPanel);
+        jTabbedPane1.addTab("Pregled knjiga", viewBooksPanel);
 
         jLabel8.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel8.setText("Naziv knjige:");
@@ -327,7 +327,7 @@ public class GlavniProzor extends javax.swing.JFrame {
                         .addGap(216, 216, 216))))
         );
 
-        jTabbedPane1.addTab("Add Books", addBooksPanel);
+        jTabbedPane1.addTab("Dodaj knjigu", addBooksPanel);
 
         fileMenu.setText("File");
 
@@ -343,7 +343,7 @@ public class GlavniProzor extends javax.swing.JFrame {
         fileMenu.add(jSeparator2);
 
         exitMenu.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_X, java.awt.event.InputEvent.CTRL_MASK));
-        exitMenu.setText("Exit");
+        exitMenu.setText("Izadji");
         exitMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitMenuActionPerformed(evt);
@@ -353,10 +353,10 @@ public class GlavniProzor extends javax.swing.JFrame {
 
         jMenuBar.add(fileMenu);
 
-        aboutMenu.setText("About");
+        aboutMenu.setText("O meni");
 
         aboutMe.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
-        aboutMe.setText("About me");
+        aboutMe.setText("Informacije");
         aboutMe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 aboutMeActionPerformed(evt);

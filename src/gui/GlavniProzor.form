@@ -29,7 +29,7 @@
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+X"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Exit"/>
+                <Property name="text" type="java.lang.String" value="Izadji"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitMenuActionPerformed"/>
@@ -39,7 +39,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="aboutMenu">
           <Properties>
-            <Property name="text" type="java.lang.String" value="About"/>
+            <Property name="text" type="java.lang.String" value="O meni"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="aboutMe">
@@ -47,7 +47,7 @@
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+A"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="About me"/>
+                <Property name="text" type="java.lang.String" value="Informacije"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aboutMeActionPerformed"/>
@@ -103,8 +103,8 @@
         <Container class="javax.swing.JPanel" name="viewBooksPanel">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="View Books">
-                <Property name="tabTitle" type="java.lang.String" value="View Books"/>
+              <JTabbedPaneConstraints tabName="Pregled knjiga">
+                <Property name="tabTitle" type="java.lang.String" value="Pregled knjiga"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -269,8 +269,8 @@
         <Container class="javax.swing.JPanel" name="addBooksPanel">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Add Books">
-                <Property name="tabTitle" type="java.lang.String" value="Add Books"/>
+              <JTabbedPaneConstraints tabName="Dodaj knjigu">
+                <Property name="tabTitle" type="java.lang.String" value="Dodaj knjigu"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
