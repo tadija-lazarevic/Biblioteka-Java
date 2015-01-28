@@ -5,9 +5,6 @@
  */
 package gui;
 
-import actions.ActionManager;
-import java.awt.List;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -17,12 +14,9 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
-import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 import model.Knjiga;
 import model.Zanr;
 
@@ -32,12 +26,13 @@ import model.Zanr;
  */
 public class GlavniProzor extends javax.swing.JFrame {
 
+    public static final String FILE_NAME = "knjige.dat";
     public static GlavniProzor instance = null;
     private final static String newline = "\n";
+
     private ArrayList<Knjiga> knjigeData = new ArrayList<Knjiga>();
     private DefaultListModel modelKnjiga = new DefaultListModel();
     public int brojKnjiga = 0;
-    public static final String FILE_NAME = "knjige.dat";
 
     /**
      * Creates new form CoreWindow
@@ -322,7 +317,7 @@ public class GlavniProzor extends javax.swing.JFrame {
         saveMenu.setText("Sacuvaj sve");
         saveMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                saveMenuActionPerformed(evt);
+                sacuvajAkcija(evt);
             }
         });
         fileMenu.add(saveMenu);
@@ -333,7 +328,7 @@ public class GlavniProzor extends javax.swing.JFrame {
         exitMenu.setText("Izadji");
         exitMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitMenuActionPerformed(evt);
+                izadjiAkcija(evt);
             }
         });
         fileMenu.add(exitMenu);
@@ -346,7 +341,7 @@ public class GlavniProzor extends javax.swing.JFrame {
         aboutMe.setText("Informacije");
         aboutMe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aboutMeActionPerformed(evt);
+                oMeniAkcija(evt);
             }
         });
         aboutMenu.add(aboutMe);
@@ -372,13 +367,9 @@ public class GlavniProzor extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void aboutMeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMeActionPerformed
-        JOptionPane.showMessageDialog(null, "Tadija Lazarevic s16/08");
-    }//GEN-LAST:event_aboutMeActionPerformed
-
-    private void exitMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitMenuActionPerformed
+    private void izadjiAkcija(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_izadjiAkcija
         this.dispose();
-    }//GEN-LAST:event_exitMenuActionPerformed
+    }//GEN-LAST:event_izadjiAkcija
 
     //Vrsi validaciju i dodaje novu knjigu u knjigeData
     private void addBookBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBookBtnActionPerformed
@@ -444,10 +435,10 @@ public class GlavniProzor extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_izbrisiBtnActionPerformed
 
-    private void saveMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveMenuActionPerformed
+    private void sacuvajAkcija(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sacuvajAkcija
         try {
             ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(GlavniProzor.FILE_NAME));
-            out.writeObject(GlavniProzor.getInstance().getKnjige());
+            out.writeObject(getKnjige());
             out.close();
             JOptionPane.showMessageDialog(null, "Podaci su uspesno sacuvani");
 
@@ -456,7 +447,11 @@ public class GlavniProzor extends javax.swing.JFrame {
         } catch (IOException e1) {
             e1.printStackTrace();
         }
-    }//GEN-LAST:event_saveMenuActionPerformed
+    }//GEN-LAST:event_sacuvajAkcija
+
+    private void oMeniAkcija(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oMeniAkcija
+        JOptionPane.showMessageDialog(null, "Tadija Lazarevic s16/08");
+    }//GEN-LAST:event_oMeniAkcija
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutMe;
