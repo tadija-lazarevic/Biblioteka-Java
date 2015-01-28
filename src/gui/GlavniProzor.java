@@ -100,12 +100,10 @@ public class GlavniProzor extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         viewBooksPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         izbrisiBtn = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         listaKnjiga = new javax.swing.JList();
-        jComboBox1 = new javax.swing.JComboBox();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -136,10 +134,7 @@ public class GlavniProzor extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel1.setText("Prikazuje:");
-
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel2.setText("Informacije o knjizi");
 
         izbrisiBtn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -153,8 +148,6 @@ public class GlavniProzor extends javax.swing.JFrame {
         });
 
         jScrollPane2.setViewportView(listaKnjiga);
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sve knjige", "Beletristika", "Naucna fantastika", "Epska fantastika", "Istorijska" }));
 
         jLabel15.setText("Naslov");
 
@@ -174,42 +167,36 @@ public class GlavniProzor extends javax.swing.JFrame {
                 .addGroup(viewBooksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2)
                     .addGroup(viewBooksPanelLayout.createSequentialGroup()
-                        .addGroup(viewBooksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(viewBooksPanelLayout.createSequentialGroup()
+                        .addGroup(viewBooksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, viewBooksPanelLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jLabel1))
+                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(viewBooksPanelLayout.createSequentialGroup()
                                 .addComponent(jLabel15)
                                 .addGap(33, 33, 33)
-                                .addComponent(jLabel16)))
-                        .addGap(5, 5, 5)
-                        .addGroup(viewBooksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(viewBooksPanelLayout.createSequentialGroup()
-                                .addGap(26, 26, 26)
+                                .addComponent(jLabel16)
+                                .addGap(31, 31, 31)
                                 .addComponent(jLabel3)
                                 .addGap(28, 28, 28)
                                 .addComponent(jLabel4)
                                 .addGap(28, 28, 28)
-                                .addComponent(jLabel5)
-                                .addGap(0, 11, Short.MAX_VALUE)))
-                        .addGap(30, 30, 30)
-                        .addComponent(izbrisiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(74, 74, 74)
-                        .addComponent(jLabel2)
-                        .addGap(0, 147, Short.MAX_VALUE)))
+                                .addComponent(jLabel5)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 426, Short.MAX_VALUE)
+                        .addComponent(izbrisiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         viewBooksPanelLayout.setVerticalGroup(
             viewBooksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewBooksPanelLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(viewBooksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(izbrisiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                .addGroup(viewBooksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(viewBooksPanelLayout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(jLabel2)
+                        .addGap(33, 33, 33))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, viewBooksPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(izbrisiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addGroup(viewBooksPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
                     .addComponent(jLabel16)
@@ -218,7 +205,7 @@ public class GlavniProzor extends javax.swing.JFrame {
                     .addComponent(jLabel5))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Pregled knjiga", viewBooksPanel);
@@ -447,8 +434,11 @@ public class GlavniProzor extends javax.swing.JFrame {
         try {
             if (index < 0) {
                 JOptionPane.showMessageDialog(null, "Izaberite film koji zelite da izbrisete");
+            } else {
+                modelKnjiga.remove(index);
+                JOptionPane.showMessageDialog(null, "Knjiga uspesno izbrisana");
             }
-            modelKnjiga.remove(index);
+
         } catch (ArrayIndexOutOfBoundsException e) {
 
         }
@@ -479,8 +469,6 @@ public class GlavniProzor extends javax.swing.JFrame {
     private javax.swing.JTextField godFld;
     private javax.swing.JButton izbrisiBtn;
     private javax.swing.JTextField izdKucaFld;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
